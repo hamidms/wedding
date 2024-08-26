@@ -95,3 +95,15 @@ body {
         margin: 3px;
     }
 }
+
+/* Mobile Phone */
+@media (max-width: 404px) {
+    html {
+        font-size: 50%;
+    }
+
+    .simply-countdown > .simply-section {
+        padding: 30px;
+        margin: 1px;
+    }
+}
