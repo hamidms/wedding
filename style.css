@@ -1,5 +1,5 @@
 :root {
-    --pink: #f14e95;
+    --primary: #eb834a;
     --bg: #0a0a0a;
     --shadow: 0 2px 2px rgba(0 0 0 / 0.5);
 }
@@ -7,7 +7,7 @@
 body {
     font-size: 1.2rem; /* 1.2 * 16px */
     font-family: "Work Sans", sans-serif;
-    min-height: 2000px;
+    min-height: 4000px;
 }
 
 .hero::before {
@@ -20,9 +20,9 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/IMG20240804114236.jpg);
     z-index: -1;
     filter: grayscale();
-    background-size: cover; /* This makes the image cover the entire background */
-    background-position: center; /* Centers the image within the element */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .hero {
@@ -49,16 +49,60 @@ body {
 }
 
 .hero a {
-    color: var(--pink);
+    color: var(--primary);
     background-color: white;
     box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-    background-color: var(--pink);
+    background-color: var(--primary);
     color: white;
 }
 
+.mynavbar {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+}
+
+.mynavbar .offcanvas {
+    height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-family: "Merienda", cursive;
+    font-size: 2.2rem;
+}
+
+.mynavbar .nav-link {
+    text-transform: uppercase;
+}
+
+.home {
+    background-image: url(img/9517412.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -5rem;
+    padding-top: 15rem;
+}
+
+.home h2 {
+    color: var(--primary);
+    font-family: "Merienda";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.home h3 {
+    color: #444;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
 /* Media Query */
 /* Laptop */
@@ -81,6 +125,11 @@ body {
     .simply-countdown > .simply-section {
         padding: 60px;
         margin: 5px;
+    }
+
+    .mynavbar .nav-link {
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
