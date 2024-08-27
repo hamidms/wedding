@@ -122,6 +122,7 @@ body {
 
 .home .couple img {
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .home .heart {
@@ -185,11 +186,146 @@ body {
     font-weight: 300;
 }
 
+.story {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    /* background-image: url(img/FLORAL_FRAME-02.jpeg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;  */
+}
+
+.story h2 {
+    color: var(--primary);
+    font-family: "Merienda";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.story span {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.story p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.timeline {
+    list-style: none;
+    padding: 1.4rem 0;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.timeline li {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+    content: '';
+    display: table;
+}
+
+.timeline li::after {
+    clear: both;
+}
+
+.timeline li .timeline-image {
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+    width: 40%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.timeline li .timeline-panel::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    top: 80px;
+    right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    top: 81px;
+    right: -13px;
+    
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+    float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+    content: '';
+    border-left: 0 solid #ccc;
+    border-right: 15px solid #ccc;
+    left: -15px;
+    right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+    content: '';
+    border-left: 0 solid #fff;
+    border-right: 15px solid #fff;
+    left: -13px;
+    right: auto;
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
     .home .heart {
         transform: translateX(-50%) translateY(45px);
+    }
+
+    .timeline li .timeline-image {
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -205,6 +341,37 @@ body {
 
     .home .heart {
         display: none;
+    }
+
+    .timeline::before {
+        left: 60px;
+    }
+
+    .timeline li .timeline-image {
+        left: 15px;
+        margin-left: 45px;
+        top: 16px;
+    }
+
+    .timeline li .timeline-panel {
+        width: calc((100% - 200px));
+        float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        top: 75px;
+        right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -13px;
+        top: 76px;
+        right: auto;
     }
 }
 
@@ -227,6 +394,19 @@ body {
     .sticky-top {
         overflow: hidden;
     }
+
+    .timeline li .timeline-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .timeline li .timeline-panel::before {
+        top: 60px;
+    }
+
+    .timeline li .timeline-panel::after {
+        top: 61px;
+    }
 }
 
 /* Mobile Phone */
@@ -238,6 +418,16 @@ body {
     .simply-countdown > .simply-section {
         padding: 45px;
         margin: 3px;
+    }
+
+    .timeline li .timeline-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .timeline li .timeline-panel {
+        width: 65%;
+        transform: translateX(-20px);
     }
 }
 
