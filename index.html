@@ -25,11 +25,11 @@
     <!-- Hero Section -->
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
-        <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
+        <h4>Kepada <span></span></h4>
         <h1>Hamid & Riris</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam:</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
+        <a href="#" class="btn btn-lg mt-4" onclick="enableScroll()">Buka Undangan</a>
       </main>
     </section>
     <!-- End of Hero Section -->
@@ -111,7 +111,10 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center ">
             <h2>Informasi Acara</h2>
-            <p class="address">Alamat: Jl. Sidodadi Tengah, Mijen, Kec. Mijen, Kota Semarang, Jawa Tengah 50519</p>
+            <p class="address">Alamat: Jl. Sidodadi, RT. 02, RW 03, Kec. Mijen, Kota Semarang, Jawa Tengah 50519</p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.9055212851607!2d110.3280236!3d-7.053615099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7061fdab40f24b%3A0xf066850798c2b623!2sJl.%20Sidodadi%20Tengah%2C%20Mijen%2C%20Kec.%20Mijen%2C%20Kota%20Semarang%2C%20Jawa%20Tengah%2050519!5e0!3m2!1sen!2sid!4v1724871848754!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="rounded" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             <a href="https://maps.app.goo.gl/1tvMqLxAmaCJo2eKA" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
             <p class="description">Diharapakan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.</p>
           </div>
@@ -428,7 +431,6 @@
       }
 
       function playAudio() {
-        // song.volume = 0.1;
         audioIconWrapper.style.display = 'flex';
         song.play();
         isPlaying = true;
@@ -471,6 +473,17 @@
           })
         });
       });
+    </script>
+
+    <!-- Nama Tamu -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('n') || '';
+      const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+      const namaContainer = document.querySelector('.hero h4 span');
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+      document.querySelector('#nama').value = nama;
     </script>
   </body>
 
