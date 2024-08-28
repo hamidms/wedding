@@ -342,6 +342,45 @@ body {
     font-weight: 300;
 }
 
+.rsvp {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+.rsvp h2 {
+    color: var(--primary);
+    font-family: "Merienda";
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.rsvp span {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.rsvp p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.rsvp button {
+    margin-top: 19px;
+    background-color: var(--secondary);
+    color: white;
+    border: 1px solid var(--secondary);
+}
+
+.rsvp button:hover {
+    background-color: white;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {

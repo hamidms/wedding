@@ -231,41 +231,84 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
       <div class="container">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-10 text-center">
-              <span>Memori Kisah Kami</span>
-              <h2>Galeri Foto</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, obcaecati sed!</p>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Memori Kisah Kami</span>
+            <h2>Galeri Foto</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, obcaecati sed!</p>
+          </div>
 
-            <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 justify-content-center">
-              <div class="col mt-3">
-                <a href="img/gallery/gal1.png" data-toggle="lightbox" data-caption="Gelang" data-gallery="mygallery">
-                  <img src="img/gallery/thumbnail/gal1.png" alt="Gelang" class="img-fluid w-100 rounded">
-                </a>
-              </div>
-              <div class="col mt-3">
-                <a href="img/gallery/gal2.png" data-toggle="lightbox" data-caption="Miniso" data-gallery="mygallery">
-                  <img src="img/gallery/thumbnail/gal2.png" alt="Miniso" class="img-fluid w-100 rounded">
-                </a>
-              </div>
-              <div class="col mt-3">
-                <a href="img/gallery/gal3.png" data-toggle="lightbox" data-caption="Sei Ramen" data-gallery="mygallery">
-                  <img src="img/gallery/thumbnail/gal3.png" alt="Sei Ramen" class="img-fluid w-100 rounded">
-                </a>
-              </div>
-              <div class="col mt-3">
-                <a href="img/gallery/gal4.png" data-toggle="lightbox" data-caption="hotomatic University" data-gallery="mygallery">
-                  <img src="img/gallery/thumbnail/gal4.png" alt="Photomatic University" class="img-fluid w-100 rounded">
-                </a>
-              </div>
+          <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 justify-content-center">
+            <div class="col mt-3">
+              <a href="img/gallery/gal1.png" data-toggle="lightbox" data-caption="Gelang" data-gallery="mygallery">
+                <img src="img/gallery/thumbnail/gal1.png" alt="Gelang" class="img-fluid w-100 rounded">
+              </a>
+            </div>
+            <div class="col mt-3">
+              <a href="img/gallery/gal2.png" data-toggle="lightbox" data-caption="Miniso" data-gallery="mygallery">
+                <img src="img/gallery/thumbnail/gal2.png" alt="Miniso" class="img-fluid w-100 rounded">
+              </a>
+            </div>
+            <div class="col mt-3">
+              <a href="img/gallery/gal3.png" data-toggle="lightbox" data-caption="Sei Ramen" data-gallery="mygallery">
+                <img src="img/gallery/thumbnail/gal3.png" alt="Sei Ramen" class="img-fluid w-100 rounded">
+              </a>
+            </div>
+            <div class="col mt-3">
+              <a href="img/gallery/gal4.png" data-toggle="lightbox" data-caption="hotomatic University" data-gallery="mygallery">
+                <img src="img/gallery/thumbnail/gal4.png" alt="Photomatic University" class="img-fluid w-100 rounded">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End of Gallery Section -->
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Répondez s'il vous plaît</span>
+            <h2>RSVP</h2>
+            <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+          </div>
+        </div>
+
+        <form class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+        method="POST" 
+        action="https://script.google.com/macros/s/AKfycbyVpvyF9I2J3RTf9eqs_1DWuTwSiGPsrwn_8Km0yd5OH5VSnp-DwepAVJVxVyDygS1_zg/exec"
+        id="my-form">
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name="nama">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="jumlah" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="2" length="1" value="1">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="konfirmasi" class="form-label">Konfirmasi</label>
+              <select name="konfirmasi" id="konfirmasi" class="form-select">
+                <option selected>Pilih salah satu</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End of RSVP -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -328,6 +371,24 @@
       if (!localStorage.getItem('opened')) {
         disableScroll();
       }
+    </script>
+
+    <script>
+      window.addEventListener("load", function() {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: 'POST',
+            body: data,
+          })
+          .then(() => {
+            alert("Konfirmasi Kehadiran Berhasil Terkirim!");
+          })
+        });
+      });
     </script>
   </body>
 
