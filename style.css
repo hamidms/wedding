@@ -381,6 +381,32 @@ body {
     border: 1px solid var(--secondary);
 }
 
+.gifts {
+    background-color: #f5f5f5;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+.gifts h2 {
+    color: var(--secondary);
+    font-family: "Merienda";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.gifts span {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.gifts p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
@@ -491,8 +517,8 @@ body {
     }
 
     .timeline li .timeline-panel {
-        width: 65%;
-        transform: translateX(-20px);
+        width: 60%;
+        transform: translateX(-10px);
     }
 }
 
@@ -505,5 +531,10 @@ body {
     .simply-countdown > .simply-section {
         padding: 30px;
         margin: 1px;
+    }
+
+    .timeline li .timeline-panel {
+        width: 55%;
+        transform: translateX(-20px);
     }
 }
