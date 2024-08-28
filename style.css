@@ -316,6 +316,32 @@ body {
     right: auto;
 }
 
+.gallery {
+    background-color: #f5f5f5;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+.gallery h2 {
+    color: var(--secondary);
+    font-family: "Merienda";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.gallery span {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.gallery p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
