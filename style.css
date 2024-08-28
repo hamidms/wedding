@@ -407,6 +407,38 @@ body {
     font-weight: 300;
 }
 
+footer {
+    padding: 2rem;
+    font-weight: 300;
+}
+
+footer i {
+    color: red;
+}
+
+.audio-icon-wrapper {
+    height: 4rem;
+    width: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.2;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    } 
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
